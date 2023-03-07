@@ -2,6 +2,10 @@ import * as apiResponse from '../helper/apiResponse.js'
 import UserModel from '../models/user/User.schema.js'
 import jwt from 'jsonwebtoken'
 
+
+
+
+
 export async function isAuthenticated(req, res, next) {
   try {
     const Bearer = req.header('Authorization')
