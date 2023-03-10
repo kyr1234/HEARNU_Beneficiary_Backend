@@ -9,7 +9,7 @@ import jwt from 'jsonwebtoken'
 export async function isAuthenticated(req, res, next) {
   try {
     const Bearer = req.header('Authorization')
-    console.log(Bearer)
+   
 
     if (Bearer) {
       const token = Bearer.replace('Bearer ', '')
