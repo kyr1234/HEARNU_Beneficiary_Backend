@@ -24,9 +24,10 @@ const app = express()
 export const port = process.env.PORT || '8000'
 
 app.use(express.static('public'))
+
 app.use(
   cors({
-    origin: '*', // Allow all domains
+    origin: 'localhost:3000',
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'], // Allow all methods
     allowedHeaders: ['Content-Type', 'Authorization', 'Cookie'], // Allow all headers
     credentials: true, // Allow credentials to be shared
