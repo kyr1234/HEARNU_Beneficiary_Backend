@@ -20,7 +20,7 @@ const UserSchema = new Schema(
 
 UserSchema.methods.getJWTToken = function () {
   return jwt.sign({ id: this._id }, process.env.JSON_WEB_TOKEN_SECRET_KEY, {
-    expiresIn: 400000,
+    expiresIn: process.env.EXPIRESIN,
   })
 }
 
