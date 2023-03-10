@@ -1,9 +1,8 @@
-import { body, validationResult } from 'express-validator'
 import * as apiResponse from '../../helper/apiResponse.js'
-import UserModel from '../../models/user/User.schema.js'
-import genderConstant from '../../config/constants/gender.constant.js'
 import Paitentmodel from '../../models/patient/patientSchema.js'
-import mongoose from 'mongoose'
+
+
+
 const GetAllocatedPatientsController = [
   async (req, res) => {
     try {

@@ -1,9 +1,9 @@
 import { body, validationResult } from 'express-validator'
 import * as apiResponse from '../../helper/apiResponse.js'
-import { comparePass } from '../../helper/passEncDec.js'
 import UserModel from '../../models/user/User.schema.js'
-import { encryptPass } from '../../helper/passEncDec.js'
 import bcrypt from 'bcryptjs'
+
+
 const signinController = [
   body('email')
     .notEmpty({ ignore_whitespace: true })

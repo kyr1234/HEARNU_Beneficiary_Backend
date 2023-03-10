@@ -1,6 +1,6 @@
 import mongoose from 'mongoose'
 import modelFiledDefinations from '../../helper/modelFiledDefinations.js'
-import genderConstant from '../../config/constants/gender.constant.js'
+
 const PatientSchema = mongoose.Schema({
   name: modelFiledDefinations.stringAndRequired,
   UDISE: {

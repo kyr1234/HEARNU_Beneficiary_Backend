@@ -46,17 +46,4 @@ export default {
       required: true,
     }
   },
-  booleanAndRequired: (defaultVal = 0) => {
-    return {
-      type: Boolean,
-      required: true,
-      default: defaultVal,
-    }
-  },
-  boolean: (defaultVal = 0) => {
-    return {
-      type: Boolean,
-      default: defaultVal,
-    }
-  },
 }

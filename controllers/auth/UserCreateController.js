@@ -1,8 +1,8 @@
 import { body, validationResult } from 'express-validator'
-import userRole from '../../config/constants/userRole.constant.js'
 import UserModel from '../../models/user/User.schema.js'
 import bcrypt from 'bcrypt'
 import * as apiResponse from './../../helper/apiResponse.js'
+
 
 const UserCreateController = [
   body('name')

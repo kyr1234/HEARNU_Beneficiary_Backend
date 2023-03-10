@@ -2,7 +2,7 @@ import mongoose from 'mongoose'
 import userrole from '../../config/constants/userRole.constant.js'
 import modelFiledDefinations from '../../helper/modelFiledDefinations.js'
 import jwt from 'jsonwebtoken'
-import dotenv from 'dotenv'
+
 const Schema = mongoose.Schema
 
 const UserSchema = new Schema(
@@ -24,13 +24,6 @@ UserSchema.methods.getJWTToken = function () {
   })
 }
 
-UserSchema.methods.getRandomPassword = function () {
-  const token = crypto.randomBytes(10).toString('hex')
-
-  const hashtoken = crypto.createHash('sha256').update(token).toString('hex')
-
-  return hashtoken
-}
 
 const UserModel = mongoose.model('UserModel', UserSchema)
 export default UserModel

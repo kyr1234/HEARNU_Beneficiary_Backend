@@ -1,4 +1,4 @@
-import { errorResponse, forbiddenResponse } from '../helper/apiResponse.js'
+import {  forbiddenResponse } from '../helper/apiResponse.js'
 
 export const roleAccess = (allowed = ['*']) => {
   return (req, res, next) => {

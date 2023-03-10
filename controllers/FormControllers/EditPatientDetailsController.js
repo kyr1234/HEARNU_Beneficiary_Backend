@@ -1,6 +1,5 @@
 import { body, validationResult } from 'express-validator'
 import * as apiResponse from '../../helper/apiResponse.js'
-import genderConstant from '../../config/constants/gender.constant.js'
 import Paitentmodel from '../../models/patient/patientSchema.js'
 import mongoose from 'mongoose'
 //Remains

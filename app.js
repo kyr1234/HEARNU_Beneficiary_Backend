@@ -1,15 +1,14 @@
 import express from 'express'
-
-import { successResponse, notFoundResponse } from './helper/apiResponse.js'
+import { notFoundResponse } from './helper/apiResponse.js'
 import mongoose from 'mongoose'
 import indexroute from './routes/index.js'
-import dotenv from 'dotenv'
+
 import cors from 'cors'
 import bodyParser from 'body-parser'
 import fileUpload from 'express-fileupload'
-dotenv.config()
 
-var MONGODB_URL = process.env.MONGODB_URL_PRODUCTION
+var MONGODB_URL = process.env.MONGODB_URL_DEVELOPMENT
+
 if (process.env.MODE == 'development') MONGODB_URL = process.env.MONGODB_URL
 mongoose
   .connect(MONGODB_URL, { useNewUrlParser: true, useUnifiedTopology: true })

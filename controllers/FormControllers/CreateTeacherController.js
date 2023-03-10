@@ -1,10 +1,10 @@
 import { body, validationResult } from 'express-validator'
-import userRole from '../../config/constants/userRole.constant.js'
-import { encryptPass } from '../../helper/passEncDec.js'
 import UserModel from '../../models/user/User.schema.js'
-
 import * as apiResponse from './../../helper/apiResponse.js'
 import bcrypt from 'bcrypt'
+
+
+
 const CreateTeacherController = [
   body('name')
     .notEmpty({ ignore_whitespace: true })

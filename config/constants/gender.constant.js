@@ -1,5 +1,5 @@
 export default {
-  Male: 1,
-  Female: 2,
-  Other: 3,
+  Male: process.env.MALE,
+  Female: process.env.Female,
+  Other: process.env.Other,
 }
